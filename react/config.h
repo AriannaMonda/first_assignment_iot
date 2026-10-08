@@ -9,10 +9,10 @@
 #define POT_PIN 10
 #define BUT01_PIN 2
 #define BUT02_PIN 3
-#define LEDG1_PIN 13
-#define LEDR1_PIN 12
-#define LEDG2_PIN 8
-#define LEDR2_PIN 7
+#define LED01_PIN 13
+#define LED02_PIN 12
+#define LED03_PIN 8
+#define LED04_PIN 7
 
 
 //metti costanti di tempo di gioco
