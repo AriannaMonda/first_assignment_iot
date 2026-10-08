@@ -15,5 +15,11 @@
 #define LEDR2_PIN 7
 
 
+//metti costanti di tempo di gioco
+/*Aggiungere un modulo Output (Consigliatissimo!):
+Per mantenere il codice pulito come ha fatto il prof, 
+non mettere i digitalWrite o le chiamate all'LCD direttamente 
+dentro core.cpp. Crea un nuovo modulo (es. display.h e leds.h) 
+che si occupa solo di far lampeggiare i led o scrivere su schermo.*/
 
 #endif
