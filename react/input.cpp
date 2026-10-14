@@ -12,7 +12,7 @@ uint8_t inputPins[NUM_BUTTONS] = {BUT01_PIN, BUT02_PIN};
 bool buttonPressed[NUM_BUTTONS] = {false, false};
 
 /* used for debouncing */
-long lastButtonPressedTimestamps[NUM_BUTTONS];
+long lastButtonPressedTimestamps[NUM_BUTTONS]; //per stabilire chi ha vinto
 
 void buttonHandler(int i);
 void buttonHandler0(){ buttonHandler(0); }
@@ -25,7 +25,7 @@ void buttonHandler(int i){
   if (ts - lastButtonPressedTimestamps[i] > BOUNCING_TIME){
     lastButtonPressedTimestamps[i] = ts;
     int status = digitalRead(inputPins[i]);
-    if (status == HIGH && !buttonPressed[i]) { 
+    if (status == HIGH && !buttonPressed[i]) { //se il bottone viene premuto setto a true buttonPressed
         buttonPressed[i] = true;
     }
   }
@@ -45,10 +45,15 @@ void resetInput(){
     lastButtonPressedTimestamps[i] = ts;    
   }
 }
+
 bool isButtonPressed(int buttonIndex){
   return buttonPressed[buttonIndex];
 }
 
 bool hasBeenPressed(int index){
   return buttonPressed[index]; 
+}
+
+int numOfBtnPressed(int buttonIndex) {
+  
 }
