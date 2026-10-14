@@ -6,11 +6,11 @@
 #define NUM_BUTTONS 2
 #define NUM_LED 4
 
-#define POT_PIN 10
+#define POT_PIN A0
 #define BUT01_PIN 2
 #define BUT02_PIN 3
 #define LED01_PIN 13
-#define LED02_PIN 12
+#define LED02_PIN 11
 #define LED03_PIN 8
 #define LED04_PIN 7
 

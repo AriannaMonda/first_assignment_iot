@@ -16,18 +16,18 @@ void initLeds() {
 }
 
 void turnOffAllLeds() {
-  digitalWrite(LED01_PIN, LOW)
-  digitalWrite(LED02_PIN, LOW)
-  digitalWrite(LED03_PIN, LOW)
-  digitalWrite(LED04_PIN, LOW)
+  digitalWrite(LED01_PIN, LOW);
+  digitalWrite(LED02_PIN, LOW);
+  digitalWrite(LED03_PIN, LOW);
+  digitalWrite(LED04_PIN, LOW);
 }
 
 void turnOnLed(int ledPin) {
-  digitalWrite(ledPin, HIGH)
+  digitalWrite(ledPin, HIGH);
 }
 
 void turnOffLed(int ledPin) {
-  digitalWrite(ledPin, LOW)
+  digitalWrite(ledPin, LOW);
 }
 
 void updateLedsFading() {
@@ -47,9 +47,9 @@ void updateLedsFading() {
     analogWrite(LED03_PIN, 255-fadeValue);
     lastFadeTime = millis();
   }
-  fadeAmount += fadeValue;
+  fadeValue += fadeAmount;
   if (fadeValue <= 0 || fadeValue >= 255) {
-    fadeAmount = -(fadeAmount)
+    fadeAmount = -(fadeAmount);
   }
 
 }
